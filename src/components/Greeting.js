@@ -13,7 +13,7 @@ function Greeting() {
   }, [dispatch]);
 
   return (
-    <section className="page">
+    <section>
       <h1>Random Greeting</h1>
       <h2>{greeting}</h2>
       <Link to="/">
