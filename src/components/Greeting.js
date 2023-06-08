@@ -5,7 +5,7 @@ import { fetchRandomGreeting } from '../redux/actions';
 
 function Greeting() {
   const greeting = useSelector((state) => state.greeting);
-  const error = useSelector((state) => state.error);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,7 +19,6 @@ function Greeting() {
       <Link to="/">
         <button type="button">Back to Home</button>
       </Link>
-      <small>{error}</small>
     </section>
   );
 }
