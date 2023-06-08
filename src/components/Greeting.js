@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { getRandomGreeting } from "../redux/greetings";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { fetchRandomGreeting } from '../redux/actions';
 
 function Greeting() {
   const greeting = useSelector((state) => state.greeting);
@@ -9,7 +9,7 @@ function Greeting() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getRandomGreeting());
+    dispatch(fetchRandomGreeting());
   }, [dispatch]);
 
   return (
